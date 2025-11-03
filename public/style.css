@@ -1,0 +1,35 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #000;
+}
+.event-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.event-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    transform: translateY(-6px) scale(1.01);
+    border-color: #000;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.modal {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    pointer-events: none;
+}
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
